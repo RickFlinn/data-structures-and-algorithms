@@ -12,3 +12,6 @@ array shifted to accommodate the given integer in its center.
 ## [ArrayBinarySearch](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/ArrayBinarySearch)
 Perform a binary search on a sorted array of integers for a search key, returning the index where it was found,
 or -1 if the search key does not exist in the array.
+
+## [LinkedListChallenge](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/LinkedListChallenge)
+Create a class for singly linked lists and nodes, with methods allowing for node insertion, printing the values contained in a linked list to console, and checking whether a value is stored in a node within the linked list. 
