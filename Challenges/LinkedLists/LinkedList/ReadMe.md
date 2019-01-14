@@ -44,9 +44,10 @@ list.PrintListValues();
 ```
 Prints to Console:
 
-` Node 1 contains value 8
+```
+Node 1 contains value 8
 
- Node 2 contains value 7
+Node 2 contains value 7
 
- Node 3 contains value 4
-`
+Node 3 contains value 4
+```
