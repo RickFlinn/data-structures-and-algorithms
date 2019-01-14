@@ -42,8 +42,11 @@ list.Includes(5); // returns false; the list does not contain this value
 
 list.PrintListValues();
 ```
-Prints to Consolea:
-> >Node 1 contains value 8
-> >Node 2 contains value 7
-> >Node 3 contains value 4
+Prints to Console:
 
+`Node 1 contains value 8
+
+ Node 2 contains value 7
+
+ Node 3 contains value 4
+`
