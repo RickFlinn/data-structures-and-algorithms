@@ -10,6 +10,11 @@ namespace LinkedListChallenge.Classes
         public Node Head { get; set; }
         public Node Current { get; set; }
 
+        /// <summary>
+        ///     Takes in an integer, creates a node to store that integer,
+        ///     and inserts the integer at the beginning of the list.
+        /// </summary>
+        /// <param name="val"></param>
         public void Insert(int val)
         {
             try
@@ -32,6 +37,12 @@ namespace LinkedListChallenge.Classes
             }
         }
 
+        /// <summary>
+        ///     Checks the linked list for the given value. If the linked list
+        ///     contains the given value, returns true; otherwise returns false.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns>True if value found; False if not</returns>
         public bool Includes (int value)
         {
             try
@@ -52,6 +63,9 @@ namespace LinkedListChallenge.Classes
             return false;
         }
 
+        /// <summary>
+        ///     Prints all values stored in the linked list to the Console.
+        /// </summary>
         public void PrintListValues()
         {
             try
@@ -70,7 +84,11 @@ namespace LinkedListChallenge.Classes
             }
         }
 
-
+        /// <summary>
+        ///     Takes in an integer, creates a node containing that integer,
+        ///     and appends the node to the end of the list.
+        /// </summary>
+        /// <param name="value"></param>
         public void Append(int value)
         {
             Node nuNode = new Node(value);
@@ -88,6 +106,14 @@ namespace LinkedListChallenge.Classes
             }
         }
 
+        /// <summary>
+        ///     Takes in a search key and a value, looks for the search key within 
+        ///     the linked list; if the search key is matched with the value in a node,
+        ///     a new node containing the given value is created and inserted before
+        ///     the node containing the search key.
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="nuValue"></param>
         public void InsertBefore(int key, int nuValue)
         {
             try
@@ -122,6 +148,14 @@ namespace LinkedListChallenge.Classes
             }
         }
 
+        /// <summary>
+        ///     Takes in a search key and a value, looks for the search key within 
+        ///     the linked list; if the search key is matched with the value in a node,
+        ///     a new node containing the given value is created and inserted after
+        ///     the node containing the search key.
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="nuValue"></param>
         public void InsertAfter(int key, int nuValue)
         {
             try
