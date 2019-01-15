@@ -14,8 +14,7 @@ namespace LinkedListChallenge.Classes
         {
             try
             {
-                Node node = new Node();
-                node.IntVal = val;
+                Node node = new Node(val);
                 if (Head == null)
                 {
                     Head = node;
@@ -74,27 +73,37 @@ namespace LinkedListChallenge.Classes
 
         public void Append(int value)
         {
-            while (Current.Next != null)
+            Node nuNode = new Node(value);
+            if (Head == null)
             {
-                Current = Current.Next;
+                Head = nuNode;
+                Current = Head;
+            } else
+            {
+                while (Current.Next != null)
+                {
+                    Current = Current.Next;
+                }
+                Current.Next = nuNode;
             }
-            Node nuNode = new Node();
-            nuNode.IntVal = value;
-            Current.Next = nuNode;
         }
 
-        public void InsertBefore(int value, int nuValue)
+        public void InsertBefore(int key, int nuValue)
         {
             try
-            {
+            { 
                 Current = Head;
-                if (Current.IntVal == value)
+                if (Head == null)
+                {
+                    throw new Exception("This list has no values");
+                }
+                else if (Current.IntVal == key)
                 {
                     Insert(nuValue);
                 }
                 else
                 {
-                    while (Current.Next.IntVal != value && Current.Next != null)
+                    while (Current.Next != null && Current.Next.IntVal != key)
                     {
                         Current = Current.Next;
                     }
@@ -102,45 +111,46 @@ namespace LinkedListChallenge.Classes
                     {
                         throw new ArgumentOutOfRangeException("Given search key does not exist in this list");
                     }
-                    Node nuNode = new Node();
-                    nuNode.IntVal = nuValue;
-                    nuNode.Next = Current.Next;
+                    Node nuNode = new Node(nuValue, Current.Next);
                     Current.Next = nuNode;
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine($"Failed in InsertBefore - {e.Message}");
+                throw e;
             }
         }
 
-        public void InsertAfter(int value, int nuValue)
+        public void InsertAfter(int key, int nuValue)
         {
             try
             {
                 Current = Head;
-                if (Current.IntVal == value)
+
+                if (Head == null)
                 {
-                    Insert(nuValue);
+                    throw new Exception("This list has no values");
                 }
                 else
                 {
-                    while (Current.IntVal != value && Current.Next != null)
+                    while (Current.IntVal != key && Current.Next != null)
                     {
                         Current = Current.Next;
                     }
-                    if (Current.Next == null && Current.IntVal != value)
+                    if (Current.Next == null && Current.IntVal != key)
                     {
                         throw new ArgumentOutOfRangeException("Given search key does not exist in this list");
                     }
-                    Node nuNode = new Node();
-                    nuNode.IntVal = nuValue;
-                    nuNode.Next = Current.Next;
-                    Current.Next = nuNode;
                 }
+
+                Node nuNode = new Node(nuValue, Current.Next);
+                Current.Next = nuNode;
+
             } catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine($"Failed in InsertAfter - {e.Message}");
+                throw e;
             }
         }
         
