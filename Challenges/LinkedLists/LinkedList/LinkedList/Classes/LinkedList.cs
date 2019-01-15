@@ -26,7 +26,6 @@ namespace LinkedListChallenge.Classes
                     Current = Head;
                     Head = node;
                     Head.Next = Current;
-                    ResetCurrent();
                 }
             } catch (Exception e)
             {
@@ -38,29 +37,27 @@ namespace LinkedListChallenge.Classes
         {
             try
             {
+                Current = Head;
                 while (Current != null)
                 {
                     if (Current.IntVal == value)
                     {
-                        ResetCurrent();
                         return true;
                     }
                     Current = Current.Next;
                 }
-                
-                
             } catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-            ResetCurrent();
             return false;
         }
 
         public void PrintListValues()
         {
             try
-            { 
+            {
+                Current = Head;
                 int counter = 1;
                 while (Current != null)
                 {
@@ -68,23 +65,84 @@ namespace LinkedListChallenge.Classes
                     counter++;
                     Current = Current.Next;
                 }
-                ResetCurrent();
             } catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
         }
 
-        private void ResetCurrent()
+
+        public void Append(int value)
+        {
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+            Node nuNode = new Node();
+            nuNode.IntVal = value;
+            Current.Next = nuNode;
+        }
+
+        public void InsertBefore(int value, int nuValue)
         {
             try
             {
-            Current = Head;
-            } catch (Exception e)
+                Current = Head;
+                if (Current.IntVal == value)
+                {
+                    Insert(nuValue);
+                }
+                else
+                {
+                    while (Current.Next.IntVal != value && Current.Next != null)
+                    {
+                        Current = Current.Next;
+                    }
+                    if (Current.Next == null)
+                    {
+                        throw new ArgumentOutOfRangeException("Given search key does not exist in this list");
+                    }
+                    Node nuNode = new Node();
+                    nuNode.IntVal = nuValue;
+                    nuNode.Next = Current.Next;
+                    Current.Next = nuNode;
+                }
+            }
+            catch (Exception e)
             {
-                Console.WriteLine("Error resetting current to head");
                 Console.WriteLine(e.Message);
             }
         }
+
+        public void InsertAfter(int value, int nuValue)
+        {
+            try
+            {
+                Current = Head;
+                if (Current.IntVal == value)
+                {
+                    Insert(nuValue);
+                }
+                else
+                {
+                    while (Current.IntVal != value && Current.Next != null)
+                    {
+                        Current = Current.Next;
+                    }
+                    if (Current.Next == null && Current.IntVal != value)
+                    {
+                        throw new ArgumentOutOfRangeException("Given search key does not exist in this list");
+                    }
+                    Node nuNode = new Node();
+                    nuNode.IntVal = nuValue;
+                    nuNode.Next = Current.Next;
+                    Current.Next = nuNode;
+                }
+            } catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        
     }
 }
