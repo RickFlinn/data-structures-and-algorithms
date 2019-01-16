@@ -15,3 +15,8 @@ or -1 if the search key does not exist in the array.
 
 ## [LinkedList](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/LinkedLists/LinkedList)
 Create a class for singly linked lists and nodes, with methods allowing for node insertion, printing the values contained in a linked list to console, and checking whether a value is stored in a node within the linked list. 
+
+
+
+## [KthFromEnd](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/LinkedLists/kthFromEnd/KthFromEnd)
+Add a new method to the LinkedList class that takes in an integer k and returns the value kth from the end of the array.
