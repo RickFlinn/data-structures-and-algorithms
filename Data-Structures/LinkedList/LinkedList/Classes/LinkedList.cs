@@ -75,13 +75,16 @@ namespace LinkedListChallenge.Classes
                 int counter = 1;
                 while (Current != null)
                 {
-                    Console.WriteLine($"Node {counter} contains value {Current.IntVal}");
+                    Console.Write($"{Current.IntVal}, ");
                     counter++;
                     Current = Current.Next;
                 }
             } catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+            } finally
+            {
+                Console.WriteLine();
             }
         }
 
@@ -189,39 +192,6 @@ namespace LinkedListChallenge.Classes
             }
         }
 
-        public int KthFromEnd(int k)
-        {
-            try
-            {
-                if (k < 0)
-                {
-                    throw new ArgumentOutOfRangeException("value of k cannot be negative");
-                }
-                Current = Head;
-                int listLength = 0;
-                while (Current != null)
-                {
-                    Current = Current.Next;
-                    listLength++;
-                }
-                Console.WriteLine($"Length is {listLength}");
-                Current = Head;
-                if (listLength < k)
-                {
-                    throw new ArgumentOutOfRangeException("value of k is greater than length of list");
-                }
-                for (int i = 1; i < listLength - k; i++)
-                {
-                    Current = Current.Next;
-                }
-                Console.WriteLine(Current.IntVal);
-                return Current.IntVal;
-            } catch (Exception e) 
-            {
-                Console.WriteLine(e.Message);
-                throw e;
-            }
-        }
         
     }
 }
