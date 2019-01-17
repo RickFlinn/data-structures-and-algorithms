@@ -20,3 +20,6 @@ Create a class for singly linked lists and nodes, with methods allowing for node
 
 ## [KthFromEnd](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/LinkedLists/kthFromEnd/KthFromEnd)
 Add a new method to the LinkedList class that takes in an integer k and returns the value kth from the end of the array.
+
+## [Merge Linked Lists](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/LinkedLists/LinkedList_Merge)
+Create a static method that merges two Linked Lists, "zipping" their values together, and returns the merged list.
