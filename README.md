@@ -23,3 +23,7 @@ Add a new method to the LinkedList class that takes in an integer k and returns 
 
 ## [Merge Linked Lists](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/LinkedLists/LinkedList_Merge)
 Create a static method that merges two Linked Lists, "zipping" their values together, and returns the merged list.
+
+## [Stacks and Queues](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Data-Structures/StacksNQueues/StacksAndQueues)
+
+Defines standalone Classes for Stacks and Queues.
