@@ -57,7 +57,7 @@ namespace Animal_Shelter_Challenge.Classes
             {
                 if (Dogs.Peek() != null)
                 {
-                    return Cats.Dequeue().Holds;
+                    return Dogs.Dequeue().Holds;
                 }
             }
             return null;
