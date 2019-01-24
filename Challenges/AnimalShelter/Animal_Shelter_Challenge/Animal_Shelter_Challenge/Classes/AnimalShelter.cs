@@ -71,16 +71,16 @@ namespace Animal_Shelter_Challenge.Classes
         {
             if (Dogs.Peek() != null && Cats.Peek() != null)
             {
-                return Dogs.Peek().Serial > Cats.Peek().Serial ? Dogs.Dequeue().Holds : Cats.Dequeue().Holds;
+                return Dogs.Peek().Serial < Cats.Peek().Serial ? Dogs.Dequeue().Holds : Cats.Dequeue().Holds;
             } else if (Dogs.Peek() == null && Cats.Peek() == null)
             {
                 return null;
-            } else if (Dogs.Peek() != null)
-            {
-                return Dogs.Dequeue().Holds;
-            } else
+            } else if (Dogs.Peek() == null)
             {
                 return Cats.Dequeue().Holds;
+            } else
+            {
+                return Dogs.Dequeue().Holds;
             }
         }
     }
