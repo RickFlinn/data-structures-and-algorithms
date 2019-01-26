@@ -20,13 +20,13 @@ namespace Animal_Shelter_Challenge
             shelter.Enqueue(new Cat());
             shelter.Enqueue(new Cat());
 
-            Console.WriteLine(shelter.Dequeue().GetType().ToString());
-            Console.WriteLine(shelter.Dequeue("cat").GetType().ToString());
-            Console.WriteLine(shelter.Dequeue("dog").GetType().ToString());
-            Console.WriteLine(shelter.Dequeue().GetType().ToString());
-            Console.WriteLine(shelter.Dequeue().GetType().ToString());
-            Console.WriteLine(shelter.Dequeue().GetType().ToString());
-            Console.WriteLine("Above should be: Cat, Cat, Dog, Dog, Dog, Cat");
+            Console.Write("Output : " + shelter.Dequeue().ToString());
+            Console.Write(", " + shelter.Dequeue("cat").ToString());
+            Console.Write(", " + shelter.Dequeue("dog").ToString());
+            Console.Write(", " + shelter.Dequeue().ToString());
+            Console.Write(", " + shelter.Dequeue().ToString());
+            Console.WriteLine(", " + shelter.Dequeue().ToString());
+            Console.WriteLine("Expected: Cat, Cat, Dog, Dog, Dog, Cat");
         }
     }
 }
