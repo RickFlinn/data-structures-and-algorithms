@@ -24,8 +24,13 @@ namespace MultiBracketValidation
                 Console.WriteLine($"Input {s} returns {MultiBracketValidation(s)}");
             }
         }
-
-
+        
+        /// <summary>
+        ///     Takes in a string, and returns a boolean indicating whether the given string
+        ///     contains valid code bracket pairs, or false if it contains invalid/unpaired brackets.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns> Boolean indicating if given string has valid bracket pairs </returns>
         public static bool MultiBracketValidation(string input)
         {
             CharStack stack = new CharStack();
