@@ -27,3 +27,9 @@ Create a static method that merges two Linked Lists, "zipping" their values toge
 ## [Stacks and Queues](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Data-Structures/StacksNQueues/StacksAndQueues)
 
 Defines standalone Classes for Stacks and Queues.
+
+## [Animal Shelter](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/AnimalShelter/Animal_Shelter_Challenge)
+Create an Animal Shelter class that only accepts `Cat`s or `Dog`s, and can Dequeue a `Cat`, a `Dog`, or the animal that has been in the shelter the longest. 
+
+## [MultiBracketValidation](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/MultiBracketValidation/MultiBracketValidation)
+Verify if a given string contains code-valid bracket pairings. 
