@@ -14,10 +14,14 @@ namespace Trees.Classes
         ///      adding the values of its children.
         /// </summary>
         /// <returns> Array of values in the Tree, with each node's value appearing before its children's values. </returns>
-        public int[] Preorder()
+        public int[] PreOrder()
         {
+            if (Root == null)
+            {
+                return new int[] { };
+            }
             List<int> list = new List<int>();
-            PreorderHelper(list, Root);
+            PreOrderHelper(list, Root);
             return list.ToArray();
         }
 
@@ -27,18 +31,18 @@ namespace Trees.Classes
         /// </summary>
         /// <param name="list">List of values in the BinaryTree</param>
         /// <param name="node">Current Node</param>
-        private void PreorderHelper(List<int> list, TreeNode node) 
+        private void PreOrderHelper(List<int> list, TreeNode node) 
         {
             list.Add(node.Value);
 
             if (node.Left != null)
             {
-                PreorderHelper(list, node.Left);
+                PreOrderHelper(list, node.Left);
             }
 
             if (node.Right != null)
             {
-                PreorderHelper(list, node.Right);
+                PreOrderHelper(list, node.Right);
             }
         }
 
@@ -50,6 +54,10 @@ namespace Trees.Classes
         /// <returns> Array of values within the tree, with each Node's values in between its children's values. </returns>
         public int[] InOrder()
         {
+            if (Root == null)
+            {
+                return new int[] { };
+            }
             List<int> list = new List<int>();
             InOrderHelper(list, Root);
             return list.ToArray();
@@ -84,6 +92,10 @@ namespace Trees.Classes
         /// <returns> Array of the values within the tree, with each Node's values after its children. </returns>
         public int[] PostOrder()
         {
+            if (Root == null)
+            {
+                return new int[] { };
+            }
             List<int> list = new List<int>();
             PostOrderHelper(list, Root);
             return list.ToArray();
