@@ -33,3 +33,6 @@ Create an Animal Shelter class that only accepts `Cat`s or `Dog`s, and can Deque
 
 ## [MultiBracketValidation](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/MultiBracketValidation/MultiBracketValidation)
 Verify if a given string contains code-valid bracket pairings. 
+
+## [Binary Trees and Binary Search Trees](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Data-Structures/Tree/Binary_Tree)
+Defines classes for the BinaryTree and BinarySearchTree data structures. 
