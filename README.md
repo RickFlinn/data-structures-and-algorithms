@@ -36,3 +36,7 @@ Verify if a given string contains code-valid bracket pairings.
 
 ## [Binary Trees and Binary Search Trees](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Data-Structures/Tree/Binary_Tree)
 Defines classes for the BinaryTree and BinarySearchTree data structures. 
+
+## [FizzBuzzTree](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Data-Structures/FizzBuzzTree)
+Replaces all the integer values in a binary tree with "Fizz" if they are divisible by 3, "Buzz" if divisible by 5, and "FizzBuzz" if 
+divisible by both. 
