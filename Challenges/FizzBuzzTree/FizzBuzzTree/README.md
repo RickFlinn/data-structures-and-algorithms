@@ -21,4 +21,6 @@ Additionally, originally the null-node check occurred on the node's children, bu
 and was refactored for simplicity's sake.
 
 ## Solution
-
+![FizzBuzzWhiteBoardSolution1](https://github.com/RickFlinn/data-structures-and-algorithms/blob/master/assets/FizzBuzzTree.jpg)
+![FizzBuzzWhiteBoard2](https://github.com/RickFlinn/data-structures-and-algorithms/blob/master/assets/FizzBuzzTree%20(2).jpg)
+![FizzBuzzWhiteBoard3](https://github.com/RickFlinn/data-structures-and-algorithms/blob/master/assets/FizzBuzzTree%20(3).jpg)
