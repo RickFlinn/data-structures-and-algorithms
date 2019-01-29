@@ -3,40 +3,49 @@ using Trees.Classes;
 
 namespace FizzBuzzTree
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            BinarySearchTree tree = new BinarySearchTree();
-            int[] treeVals = new int[] { 4, 3, 87, 26, 30, 1, -3, 14, 10, 36 };
-            foreach (int val in treeVals)
-            {
-                tree.Add(val);
-            }
+            BinaryTree<object> tree = new BinaryTree<object>();
+            
+            tree.Root = new TreeNode<object>(new TreeNode<object>(15), 4, new TreeNode<object>(5));
+            
+
         }
-
-
-        public static void FizzBuzzTree(BinaryTree tree)
+        
+        // Traverses over 
+        public static void FizzBuzzTree(BinaryTree<object> tree)
         {
             FizzBuzzTreeHelper(tree.Root);
             
         }
 
-        public static void FizzBuzzTreeHelper(TreeNode node)
+        public static void FizzBuzzTreeHelper(TreeNode<object> node)
         {
-            if (node != null)
+            try
             {
-                if (node.Value % 3 == 0)
+                if (node != null)
                 {
-                    node.Value = "Fizz";
-                } else if (node.Value % 5 == 0)
-                {
-                    node.Value = "Buzz";
-                } else if (node.Value % 3 == 0 && node.Value % 5 == 0)
-                {
-                    node.Value = "FizzBuzz";
+                    if ((int)node.Value % 3 == 0 && (int)node.Value % 5 == 0)
+                    {
+                        node.Value = "FizzBuzz";
+                    } else if ((int)node.Value % 3 == 0)
+                    {
+                        node.Value = "Fizz";
+                    }
+                    else if ((int)node.Value % 5 == 0)
+                    {
+                        node.Value = "Buzz";
+                    }
+                    FizzBuzzTreeHelper(node.Left);
+                    FizzBuzzTreeHelper(node.Right);
                 }
+            } catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
+            
         }
     }
 }
