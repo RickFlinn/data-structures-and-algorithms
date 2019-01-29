@@ -2,11 +2,11 @@
 
 namespace Trees.Classes
 {
-    public class TreeNode
+    public class TreeNode<T>
     {
-        public TreeNode Left { get; set; }
-        public TreeNode Right { get; set; }
-        public int Value { get; set; }
+        public TreeNode<T> Left { get; set; }
+        public TreeNode<T> Right { get; set; }
+        public T Value { get; set; }
 
 
         public TreeNode()
@@ -15,28 +15,28 @@ namespace Trees.Classes
             Right = null;
         }
 
-        public TreeNode (int val)
+        public TreeNode (T val)
         {
             Value = val;
             Left = null;
             Right = null;
         }
 
-        public TreeNode (TreeNode left, int val)
+        public TreeNode (TreeNode<T> left, T val)
         {
             Value = val;
             Left = left;
             Right = null;
         }
 
-        public TreeNode(int val, TreeNode right)
+        public TreeNode(T val, TreeNode<T> right)
         {
             Value = val;
             Right = right;
             Left = null;
         }
 
-        public TreeNode(TreeNode left, int val, TreeNode right)
+        public TreeNode(TreeNode<T> left, T val, TreeNode<T> right)
         {
             Value = val;
             Left = left;

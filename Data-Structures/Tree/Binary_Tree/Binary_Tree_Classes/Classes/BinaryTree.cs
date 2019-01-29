@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Trees.Classes
 {
-    public class BinaryTree
+    public class BinaryTree<T>
     {
-        public TreeNode Root { get; set; }
+        public TreeNode<T> Root { get; set; }
 
         /// <summary>
         ///   Builds and returns an array of values in the tree.
@@ -14,13 +14,13 @@ namespace Trees.Classes
         ///      adding the values of its children.
         /// </summary>
         /// <returns> Array of values in the Tree, with each node's value appearing before its children's values. </returns>
-        public int[] PreOrder()
+        public T[] PreOrder()
         {
             if (Root == null)
             {
-                return new int[] { };
+                return new T[] { };
             }
-            List<int> list = new List<int>();
+            List<T> list = new List<T>();
             PreOrderHelper(list, Root);
             return list.ToArray();
         }
@@ -31,7 +31,7 @@ namespace Trees.Classes
         /// </summary>
         /// <param name="list">List of values in the BinaryTree</param>
         /// <param name="node">Current Node</param>
-        private void PreOrderHelper(List<int> list, TreeNode node) 
+        private void PreOrderHelper(List<T> list, TreeNode<T> node) 
         {
             list.Add(node.Value);
 
@@ -52,13 +52,13 @@ namespace Trees.Classes
         ///       adds the Node itself's value, and then the value of its Right child.
         /// </summary>
         /// <returns> Array of values within the tree, with each Node's values in between its children's values. </returns>
-        public int[] InOrder()
+        public T[] InOrder()
         {
             if (Root == null)
             {
-                return new int[] { };
+                return new T[] { };
             }
-            List<int> list = new List<int>();
+            List<T> list = new List<T>();
             InOrderHelper(list, Root);
             return list.ToArray();
         }
@@ -69,7 +69,7 @@ namespace Trees.Classes
         /// </summary>
         /// <param name="list"></param>
         /// <param name="node"></param>
-        private void InOrderHelper(List<int> list, TreeNode node)
+        private void InOrderHelper(List<T> list, TreeNode<T> node)
         {
             if (node.Left != null)
             {
@@ -90,13 +90,13 @@ namespace Trees.Classes
         ///         then the value of the Node itself.
         /// </summary>
         /// <returns> Array of the values within the tree, with each Node's values after its children. </returns>
-        public int[] PostOrder()
+        public T[] PostOrder()
         {
             if (Root == null)
             {
-                return new int[] { };
+                return new T[] { };
             }
-            List<int> list = new List<int>();
+            List<T> list = new List<T>();
             PostOrderHelper(list, Root);
             return list.ToArray();
         }
@@ -107,7 +107,7 @@ namespace Trees.Classes
         /// </summary>
         /// <param name="list"></param>
         /// <param name="node"></param>
-        private void PostOrderHelper(List<int> list, TreeNode node)
+        private void PostOrderHelper(List<T> list, TreeNode<T> node)
         {
             if (node.Left != null)
             {
