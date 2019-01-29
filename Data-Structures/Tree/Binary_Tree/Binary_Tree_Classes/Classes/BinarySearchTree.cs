@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Trees.Classes
 {
-    public class BinarySearchTree : BinaryTree
+    public class BinarySearchTree : BinaryTree<int>
     {
         
         public BinarySearchTree ()
@@ -14,7 +14,7 @@ namespace Trees.Classes
 
         public BinarySearchTree(int rootVal)
         {
-            Root = new TreeNode(rootVal);
+            Root = new TreeNode<int>(rootVal);
         }
 
 
@@ -29,7 +29,7 @@ namespace Trees.Classes
             {
                 if (Root == null)
                 {
-                    Root = new TreeNode(val);
+                    Root = new TreeNode<int>(val);
                 } else
                 {
                     AddHelper(Root, val);
@@ -52,13 +52,13 @@ namespace Trees.Classes
         /// </summary>
         /// <param name="node"> "Current" Node </param>
         /// <param name="val"> value to add to the Binary Search Tree </param>
-        private void AddHelper(TreeNode node, int val)
+        private void AddHelper(TreeNode<int> node, int val)
         {
             if (val < node.Value)
             {
                 if (node.Left == null)
                 {
-                    node.Left = new TreeNode(val);
+                    node.Left = new TreeNode<int>(val);
                 } else
                 {
                     AddHelper(node.Left, val);
@@ -67,7 +67,7 @@ namespace Trees.Classes
             {
                 if (node.Right == null)
                 {
-                    node.Right = new TreeNode(val);
+                    node.Right = new TreeNode<int>(val);
                 } else
                 {
                     AddHelper(node.Right, val);
@@ -101,7 +101,7 @@ namespace Trees.Classes
         /// <param name="node"> "Current" TreeNode being examined </param>
         /// <param name="val"> Value to search the tree for </param>
         /// <returns> Boolean indicating whether the Node or its children contain the given integer. </returns>
-        private bool ContainHelper(TreeNode node, int val)
+        private bool ContainHelper(TreeNode<int> node, int val)
         {
             if (node == null)
             {
