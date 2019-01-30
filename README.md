@@ -40,3 +40,6 @@ Defines classes for the BinaryTree and BinarySearchTree data structures.
 ## [FizzBuzzTree](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/FizzBuzzTree/FizzBuzzTree)
 Replaces all the integer values in a binary tree with "Fizz" if they are divisible by 3, "Buzz" if divisible by 5, and "FizzBuzz" if 
 divisible by both. 
+
+## [BreadthFirst](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/BreadthFirst)
+Write a method that performs a breadth-first traversal on a binary tree, and printing its values to console. 
