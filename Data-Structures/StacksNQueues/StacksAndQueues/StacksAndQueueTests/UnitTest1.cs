@@ -37,7 +37,7 @@ namespace StacksAndQueueTests
             stack.Push(new Node(1));
             stack.Push(new Node(2));
             stack.Push(new Node(3));
-            Assert.True(stack.Top.Value == 3 && stack.Top.Next.Value == 2 && stack.Top.Next.Next.Value == 1);
+            Assert.True((int)stack.Top.Value == 3 && (int)stack.Top.Next.Value == 2 && (int)stack.Top.Next.Next.Value == 1);
         }
 
         [Fact]
