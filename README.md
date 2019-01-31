@@ -43,3 +43,6 @@ divisible by both.
 
 ## [BreadthFirst](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/BreadthFirst)
 Write a method that performs a breadth-first traversal on a binary tree, and printing its values to console. 
+
+## [FindMaxValue](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/FindMaxValue)
+Write a method that returns the maximum value in a Binary Tree of numeric values. 
