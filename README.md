@@ -46,3 +46,9 @@ Write a method that performs a breadth-first traversal on a binary tree, and pri
 
 ## [FindMaxValue](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/FindMaxValue)
 Write a method that returns the maximum value in a Binary Tree of numeric values. 
+
+## [BinaryOddSum](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/BinaryOddSum)
+Write a method that returns the sum of all odd values in a binary tree. 
+
+
+
