@@ -41,5 +41,10 @@ namespace BinaryOddSumTests
             BinarySearchTree tree = new BinarySearchTree();
             Assert.Equal(0, Program.BinaryOddSum(tree));
         }
+        [Fact]
+        public void NullTree()
+        {
+            Assert.Throws<NullReferenceException>(() => Program.BinaryOddSum(null));
+        }
     }
 }
