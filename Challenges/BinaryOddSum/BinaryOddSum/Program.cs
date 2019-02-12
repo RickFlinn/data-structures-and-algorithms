@@ -40,5 +40,36 @@ namespace BinaryOddSum
             }
             return sum;
         }
+
+        // Not my idea (praise Google and people smarter than I), but I wanted to write this to
+        //  reinforce the idea that DFS doesn't require recursion.
+        public static int BinaryOddSumDFS(BinaryTree<int> tree)
+        {
+            int sum = 0;
+            if (tree.Root == null)
+            {
+                return sum;
+            }
+            Stack s = new Stack();
+            s.Push(tree.Root);
+            while (s.Count > 0)
+            {
+                TreeNode<int> node = (TreeNode<int>)s.Pop();
+                if (node.Value % 2 == 1)
+                {
+                    sum += node.Value;
+                }
+                if (node.Left != null)
+                {
+                    s.Push(node.Left);
+                }
+                if (node.Right != null)
+                {
+                    s.Push(node.Right);
+                }
+            }
+            return sum;
+            
+        }
     }
 }
