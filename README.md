@@ -51,4 +51,10 @@ Write a method that returns the maximum value in a Binary Tree of numeric values
 Write a method that returns the sum of all odd values in a binary tree. 
 
 
+## [Generate Balanced Parentheses Combos](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/GenBalancedParenCombos)
 
+For a given integer n, generate all possible permutations of n pairs of parentheses, with all permutations being "code-legal" (i.e., closing brackets must always be preceded by a paired opening bracket, and vice versa.)
+
+## [CalculateBinaryTreeHeight](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/CalculateBinaryTreeHeight)
+
+Given a binary tree's root node, calculate the height of the binary tree. 
