@@ -17,7 +17,6 @@ namespace Insertion_Sort
         }
 
         // Sorts an array of integers from small to large, and returns the array.
-        //   Sorting 
         public static int[] InsertionSort(int[] array)
         {
             for (int i = 1; i < array.Length; i++)
