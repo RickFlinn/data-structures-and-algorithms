@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace GenBalancedParenCombos
@@ -12,8 +13,8 @@ namespace GenBalancedParenCombos
             PrintArrayValues(GenBalancedParenCombos(2));
             PrintArrayValues(GenBalancedParenCombos(3));
             PrintArrayValues(GenBalancedParenCombos(4));
-            PrintArrayValues(GenBalancedParenCombos(0));
-            PrintArrayValues(GenBalancedParenCombos(7));
+
+            PrintArrayValues(GenBalancedOptimal(3));
         }
         
         /// <summary>
@@ -62,6 +63,24 @@ namespace GenBalancedParenCombos
                 }
             }
         }
+
+
+
+        public static string[] GenBalancedOptimal(int n)
+        {
+            Queue<string> q = new Queue<string>();
+            q.Enqueue("()");
+            while (q.Peek().Length < n * 2)
+            {
+                string partial = q.Dequeue();
+                q.Enqueue("()" + partial);
+                q.Enqueue(partial + "()");
+                q.Enqueue("(" + partial + ")");
+            }
+            return q.ToArray();
+        }
+
+
 
         // Prints all the values in an array of strings to the console. 
         public static void PrintArrayValues(string[] array)
