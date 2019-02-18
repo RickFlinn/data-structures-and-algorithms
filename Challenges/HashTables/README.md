@@ -21,12 +21,12 @@ When an item is added to the HashTable, its key is hashed and used to access an 
 With a perfect hash function, the Add, Get and Contains methods should all consume only O(1) time - because we are using the key to directly access an array index, the size of the dataset is irrelevant; we are only ever considering one bucket of information, and a perfect hash function would ensure two items were never placed in the same bucket.
 However, I have not created a perfect hash function or the ability to resize the backing array. Because of this, the average lookup time should be O(aL), where aL is the average Load of items in all buckets within the array, because we have to iterate through each item stored in a bucket. 
 ## API
-### `int Hash(string key)`
+#### `int Hash(string key)`
 The given key is converted into an integer, that represents the index at which the given key would be stored.
 
 This is how the HashTable decides where to place and retrieve items; all other methods are dependent on it.
 
-### `void Add(string key, object value)`
+#### `void Add(string key, object value)`
 Takes in a string key, and an object value. It then hashes the key into an integer index.
 
 The method first attempts to access that key within the HashTable. 
@@ -35,12 +35,12 @@ If the key hasn't been taken, the bucket at the index is checked.
 If that bucket is null - i.e., no key-value pair has been assigned to this index - a new List object is instantiated to the bucket.
 Then, the key-value pair is added to the bucket.
 
-### `object Get(string key)`
+#### `object Get(string key)`
 The given key is hashed, and the bucket at the index checked. 
 If the bucket has not been instantiated, i.e. no value has been placed at that index, null is returned.
 If there is a bucket, each item in the bucket is checked. If an item contains the given key, the value is returned.
 If the bucket contains no item with the given key, null is returned.
 
-### `bool Contains(string key)`
+#### `bool Contains(string key)`
 Returns whether the HashTable contains the given key.
 Looks up the bucket at the hashed key index. Then, each item in the bucket is iterated through; if the bucket is empty, or the bucket does not contain a key-value pair with the given key, false is returned. If the key is found, returns true.
