@@ -59,5 +59,5 @@ For a given integer n, generate all possible permutations of n pairs of parenthe
 
 Given a binary tree's root node, calculate the height of the binary tree. 
 
-# [InsertionSort]((https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/sort/Insertion_Sort)
+# [InsertionSort](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/sort/Insertion_Sort)
 Implement a method that takes in an array, and sorts it using the insertion sort method.
