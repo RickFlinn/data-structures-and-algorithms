@@ -63,6 +63,17 @@ namespace HashTableTests
             Assert.Equal("backwards", table.Get("cba"));
         }
 
+        [Theory]
+        [InlineData("ayy lmao")]
+        [InlineData("asldkfjalsdkjfasdhfqwieoruyowieuyraosdhfaskljdhfaslkdjfhalskdhfdsafhvbbvxb")]
+        [InlineData("Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.")]
+        public void HashesInRange(string key)
+        {
+            HashTable table = new HashTable();
+            int index = table.Hash(key);
+            Assert.True(index >= 0 && index < 1024);
+            
 
+        }
     }
 }
