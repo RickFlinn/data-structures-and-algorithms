@@ -64,3 +64,6 @@ Implement a method that takes in an array, and sorts it using the insertion sort
 
 ## [HashTable](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/HashTables)
 Implement a HashTable class with Add, Contains, Get, and Hash methods. 
+
+## [Repeated Word](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/RepeatedWord/Repeated_Word)
+Find the first repeated word in a lengthy string.
