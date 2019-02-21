@@ -67,3 +67,6 @@ Implement a HashTable class with Add, Contains, Get, and Hash methods.
 
 ## [Repeated Word](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/RepeatedWord/Repeated_Word)
 Find the first repeated word in a lengthy string.
+
+## [Left Join](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/Left_Join)
+Perform a LEFT JOIN on two hash tables. 
