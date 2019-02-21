@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Left_Join", "Left_Join\Left_Join.csproj", "{1E18C253-AED4-4467-A9C0-51D8EE7D686F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeftJoinTests", "LeftJoinTests\LeftJoinTests.csproj", "{3DB62389-1FEA-4A48-9290-9F848B08ECCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E18C253-AED4-4467-A9C0-51D8EE7D686F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E18C253-AED4-4467-A9C0-51D8EE7D686F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E18C253-AED4-4467-A9C0-51D8EE7D686F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E18C253-AED4-4467-A9C0-51D8EE7D686F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB62389-1FEA-4A48-9290-9F848B08ECCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB62389-1FEA-4A48-9290-9F848B08ECCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB62389-1FEA-4A48-9290-9F848B08ECCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB62389-1FEA-4A48-9290-9F848B08ECCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7E0705D-667A-48C7-A1D4-D389B98FDBF9}
+	EndGlobalSection
+EndGlobal
