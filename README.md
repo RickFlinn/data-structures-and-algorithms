@@ -70,3 +70,6 @@ Find the first repeated word in a lengthy string.
 
 ## [Left Join](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/Left_Join)
 Perform a LEFT JOIN on two hash tables. 
+
+## [Graph](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Data-Structures/Graph)
+Implement a Graph data structure. 
