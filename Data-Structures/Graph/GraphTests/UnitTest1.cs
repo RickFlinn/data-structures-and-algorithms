@@ -26,7 +26,7 @@ namespace GraphTests
             graph.AddNode(node1);
             graph.AddNode(node2);
             graph.AddEdge(node1, node2);
-            Assert.NotNull(node1.Adjacencies);
+            Assert.Single(node1.Adjacencies);
         }
 
         [Fact]
@@ -57,7 +57,7 @@ namespace GraphTests
                 Node nuNeighbor = graph.AddNode(i);
                 graph.AddEdge(node1, nuNeighbor);
             }
-            
+
             Assert.Equal(neighbors, node1.Adjacencies.Count);
         }
 
@@ -98,8 +98,8 @@ namespace GraphTests
         }
 
         [Theory]
-        [InlineData(null,null)]
-        [InlineData(4,5)]
+        [InlineData(null, null)]
+        [InlineData(4, 5)]
         public void HaveWeights(int? weight1, int? weight2)
         {
             Graph graph = new Graph();
@@ -157,5 +157,87 @@ namespace GraphTests
             Assert.Null(graph.GetNodes());
         }
 
+
+
+        [Fact]
+        public void OneNodeBFT()
+        {
+            Graph garph = new Graph();
+            Node node = new Node(1);
+            garph.AddNode(node);
+            Node[] nodes = garph.BreadthFirst(node);
+            Assert.Contains(node, nodes);
+        }
+
+        [Theory]
+        [InlineData(2)]
+        [InlineData(7)]
+        [InlineData(22)]
+        public void LinearOrderRespected(int graphNum)
+        {
+            Graph graph = new Graph();
+            Node root = graph.AddNode(0);
+            Node temp = root;
+            for (int i = 1; i < graphNum; i++)
+            {
+                Node otherNode = graph.AddNode(i);
+                graph.AddEdge(temp, otherNode);
+                temp = otherNode;
+            }
+
+            bool linear = true;
+            Node[] returned = graph.BreadthFirst(root);
+
+            for (int i = 1; i < returned.Length; i++)
+            {
+                if ((int)returned[i].Value != ((int)returned[i - 1].Value + 1))
+                {
+                    linear = false;
+                }
+            }
+
+            Assert.True(linear);
+        }
+
+        [Theory]
+        [InlineData(2)]
+        [InlineData(7)]
+        [InlineData(22)]
+        public void AllLinearNodesTraversed(int graphNum)
+        {
+            Graph graph = new Graph();
+            Node root = graph.AddNode(0);
+            Node temp = root;
+            for (int i = 1; i < graphNum; i++)
+            {
+                Node otherNode = graph.AddNode(i);
+                graph.AddEdge(temp, otherNode);
+                temp = otherNode;
+            }
+
+            Node[] returned = graph.BreadthFirst(root);
+            Assert.Equal(graph.Size(), returned.Length);
+        }
+
+        [Fact]
+        public void AllNodesTraversed()
+        {
+            Graph graph = new Graph();
+            Node node1 = graph.AddNode(1);
+            Node node2 = graph.AddNode(2);
+            Node node3 = graph.AddNode(3);
+            Node node4 = graph.AddNode(4);
+            Node node5 = graph.AddNode(5);
+
+            graph.AddEdge(node1, node2);
+            graph.AddEdge(node1, node3);
+            graph.AddEdge(node2, node3);
+            graph.AddEdge(node2, node4);
+            graph.AddEdge(node3, node4);
+            graph.AddEdge(node5, node4);
+            graph.AddEdge(node2, node5);
+
+            Assert.Equal(graph.Size(), graph.BreadthFirst(node1).Length);
+        }
     }
 }
