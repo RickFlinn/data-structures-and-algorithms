@@ -76,3 +76,6 @@ Implement a Graph data structure.
 
 ## [Breadth-First Traversal - Graph](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Data-Structures/Graph)
 Add a method to the Graph implementation that performs a breadth-first traversal of the Graph, returning a collection of Nodes in the order they were traversed.
+
+## [GetEdge](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/GraphGetEdge)
+Given an array of strings representing cities in a travel itinerary and a Graph representing flight connections, determine if the given itinerary is possible using direct flights between each location and the price of the trip if it is.
