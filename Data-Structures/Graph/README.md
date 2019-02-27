@@ -57,3 +57,8 @@ Returns the total number of Nodes in the Graph.
 
 #### `public Node[] BreadthFirst(Node root)`
 Takes in a "root" Node, performs a breadthfirst traversal of the graph starting at that root node, and returns an array of the Nodes in the order they were traversed. 
+
+
+## BFT Solution
+![Problem Domain and visual](https://github.com/RickFlinn/data-structures-and-algorithms/blob/master/assets/GraphBFT%20(1).jpg)
+![Algorithm and PseudoCode](https://github.com/RickFlinn/data-structures-and-algorithms/blob/master/assets/GraphBFT%20(2).jpg)
