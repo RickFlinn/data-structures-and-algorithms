@@ -62,7 +62,7 @@ Given a binary tree's root node, calculate the height of the binary tree.
 ## [InsertionSort](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/sort/Insertion_Sort)
 Implement a method that takes in an array, and sorts it using the insertion sort method.
 
-## [HashTable](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/HashTables)
+## [HashTable](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Data-Structures/HashTables)
 Implement a HashTable class with Add, Contains, Get, and Hash methods. 
 
 ## [Repeated Word](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/RepeatedWord/Repeated_Word)
