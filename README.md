@@ -74,5 +74,5 @@ Perform a LEFT JOIN on two hash tables.
 ## [Graph](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Data-Structures/Graph)
 Implement a Graph data structure. 
 
-## [Breadth-First Traversal = Graph](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Data-Structures/Graph)
+## [Breadth-First Traversal - Graph](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Data-Structures/Graph)
 Add a method to the Graph implementation that performs a breadth-first traversal of the Graph, returning a collection of Nodes in the order they were traversed.
