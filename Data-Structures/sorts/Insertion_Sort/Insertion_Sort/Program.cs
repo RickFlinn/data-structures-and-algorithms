@@ -16,7 +16,12 @@ namespace Insertion_Sort
             }
         }
 
-        // Sorts an array of integers from small to large, and returns the array.
+        
+        /// <summary>
+        ///     Sorts an array of integers from small to large, and returns the array.
+        /// </summary>
+        /// <param name="array"> Array to sort </param>
+        /// <returns> Sorted array </returns>
         public static int[] InsertionSort(int[] array)
         {
             for (int i = 1; i < array.Length; i++)
@@ -33,8 +38,14 @@ namespace Insertion_Sort
             return array;
         }
 
-        // Generized insertion sort that accepts an array and a delegate that provides logic to determine which of two elements should be sorted.
-        //  Returns an array sorted using that logic.
+        
+        /// <summary>
+        ///     Generalized insertion sort that accepts an array and a delegate that provides logic to determine how two elements should be sorted.
+        ///     Returns an array sorted using that logic.
+        /// </summary>
+        /// <param name="array"> Array to sort </param>
+        /// <param name="sorter"> Ordering function </param>
+        /// <returns> Sorted array </returns>
         public static object[] InsertionSort(object[] array, Func<object, object, bool> sorter)
         {
             for (int i = 1; i < array.Length; i++)
