@@ -12,8 +12,12 @@ namespace HashTables
         {
             BackingArray = new List<KeyValuePair<string, object>>[1024];
         }
-
-        // Takes in a string key, and generates an index in the HashTable where that key-value pair will be located.
+        
+        /// <summary>
+        ///     Takes in a string key, and generates an index in the HashTable where that key-value pair will be located.
+        /// </summary>
+        /// <param name="key"> String key to hash </param>
+        /// <returns> Hashed index as an integer </returns>
         public int Hash(string key)
         {
             int sum = 0;
