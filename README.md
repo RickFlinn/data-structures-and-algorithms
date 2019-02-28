@@ -79,3 +79,6 @@ Add a method to the Graph implementation that performs a breadth-first traversal
 
 ## [GetEdge](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/GraphGetEdge)
 Given an array of strings representing cities in a travel itinerary and a Graph representing flight connections, determine if the given itinerary is possible using direct flights between each location and the price of the trip if it is.
+
+## [Depth First Traversal - Graph](https://github.com/RickFlinn/data-structures-and-algorithms/tree/master/Challenges/depthFirst)
+Perform a depth-first traversal of a Graph with bidirectional adjacencies.
